@@ -1,0 +1,13 @@
+# service file to add to systemctl
+
+[Unit]
+Description=Service to run the Notion Grocery List Bot
+After=multi-user.target
+
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/bin/python3 /root/Notion-Grocery-List-Bot/main.py
+
+[Install]
+WantedBy=multi-user.target
